@@ -5,6 +5,8 @@ import {
   View, StyleSheet, Switch, Modal, TouchableHighlight, Text
 } from "react-native"
 
+import Chat from "./Chat"
+
 export default class Menu extends Component {
   constructor(props) {
     super(props);
@@ -24,10 +26,11 @@ export default class Menu extends Component {
           style={styles.switch}
         />
         <TouchableHighlight onPress={() => {
-         this.setModalVisible(true)
-       }}>
-         <Text>Get Help Now!</Text>
-       </TouchableHighlight>
+          this.setModalVisible(true)
+        }}>
+          <Text>Get Help Now!</Text>
+        </TouchableHighlight>
+        <Chat/>
         <Modal
           animationType={"slide"}
           transparent={false}

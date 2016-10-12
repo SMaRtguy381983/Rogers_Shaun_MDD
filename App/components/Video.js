@@ -17,8 +17,8 @@ export default class Video extends Component {
       },
 
       playbackRate: 1,
-      paused: false,
-      pausedImage: "pause",
+      paused: !this.props.autoplay,
+      pausedImage: this.props.autoplay ? "pause" : "play",
       muted: true,
       mutedImage: "mute",
     }
@@ -171,7 +171,7 @@ export default class Video extends Component {
           // rate={1}
           volume={1.0}                      // 0 is muted, 1 is normal.
           muted={this.state.muted}          // Mutes the audio entirely.
-          paused={false}                    // Pauses playback entirely.
+          paused={!this.props.autoplay}     // Pauses playback entirely.
           resizeMode="cover"                // Fill the whole screen at aspect ratio.
           repeat={false}                    // Repeat forever.
           playInBackground={false}          // Audio continues to play when entering

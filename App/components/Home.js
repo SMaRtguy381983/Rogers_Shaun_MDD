@@ -11,7 +11,8 @@ export default class Home extends Component {
     super(props)
 
     this.state = {
-      autoplay: true
+      // autoplay: true,
+      autoplay: false,
     }
   }
   getAutoplay() {
@@ -30,7 +31,7 @@ export default class Home extends Component {
           <Text style={styles.h1}>Suicide Watch</Text>
           <Text style={styles.p}>There is help.</Text>
         </View>
-        <Video />
+        <Video autoplay={this.state.autoplay} />
       </View>
     )
   }

@@ -9,6 +9,8 @@
     "react": "15.3.2",
     "react-native": "0.34.1",
     "react-native-native-video-player": "^1.2.2",
-    "react-native-video": "^0.9.0"
+    "react-native-video": "^0.9.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0"
   }
 }
