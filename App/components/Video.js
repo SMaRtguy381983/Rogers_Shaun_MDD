@@ -165,27 +165,9 @@ export default class Video extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.playbackRate}>{statusText}</Text>
-        <ReactNativeVideo
-          source={require("../../video.mp4")}
-          rate={this.state.playbackRate}    // 0 is paused, 1 is normal.
-          // rate={1}
-          volume={1.0}                      // 0 is muted, 1 is normal.
-          muted={this.state.muted}          // Mutes the audio entirely.
-          paused={!this.props.autoplay}     // Pauses playback entirely.
-          resizeMode="cover"                // Fill the whole screen at aspect ratio.
-          repeat={false}                    // Repeat forever.
-          playInBackground={false}          // Audio continues to play when entering
-                                            // background.
-          playWhenInactive={false}          // [iOS] Video continues to play when
-                                            // control or notification center are
-                                            // shown.
-          onLoadStart={this.loadStart.bind(this)}
-          onLoad={this.setDuration.bind(this)}
-          onProgress={this.setTime.bind(this)}
-          onEnd={this.onEnd.bind(this)}
-          onError={this.videoError.bind(this)}
-          style={styles.video}
-        />
+        <View style={styles.video}>
+
+        </View>
         <View style={styles.buttons}>
           <VideoButton
             onPress={this.rewind.bind(this)}

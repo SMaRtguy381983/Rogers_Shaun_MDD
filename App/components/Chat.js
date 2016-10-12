@@ -13,7 +13,7 @@ export default class Chat extends Component {
     super(props)
 
     const state = {
-      modalVisible: true,
+      modalVisible: false,
       chatStore: store.getState(),
     }
 
